@@ -6,30 +6,16 @@
 package thx.util;
 import haxe.macro.Context;
 import haxe.macro.Expr;
-//import thx.macro.Macros;
 
 class Imports
 {
-	@:macro public static function pack(s : String, rec : Bool) : Expr
+	/** Include all classes in the given package.  A shortcut for haxe.macro.Compiler.include() */
+	@:macro public static function pack(pack : String, ?recursive : Bool = true) : Expr
 	{
-//		switch(expr.expr)
-//		{
-//			case EConst(c):
-//				switch(c)
-//				{
-//					case CString(s):
-						haxe.macro.Compiler.include(s, rec);
-		
-//					default:
-//						Context.error("thx.util.Import.pack only accepts one string argument", expr.pos);
-//				}
-//			default:
-//				Context.error("thx.util.Import.pack only accepts one string argument", expr.pos);
-//		}
-//		return expr;
+		haxe.macro.Compiler.include(pack, recursive);
 		return
 		{
-			expr : EConst(CString(s)),
+			expr : EConst(CString(pack)),
 			pos : Context.currentPos() 
 		};
 	}
