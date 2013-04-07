@@ -303,7 +303,7 @@ customs for missing features
 	*	@param culture The culture to use to get the weekday name.  Default: null (will fetch Culture.defaultCulture)
 	*	@return The abbreviated weekday name for the given culture, eg "Monday".  Returns null if no match was found.
 	*/
-	static public function weekDayShortNameFromNumber(weekDayNum:Int, ?firstDayOfWk = 0, ?culture : Culture) {
+	static public function weekDayNameFromNum(weekDayNum:Int, ?firstDayOfWk = 0, ?culture : Culture) {
 		if (null == culture)
 			culture = Culture.defaultCulture;
 		
@@ -321,7 +321,7 @@ customs for missing features
 	*	@param culture The culture to use to get the weekday name.  Default: null (will fetch Culture.defaultCulture)
 	*	@return The abbreviated weekday name for the given culture, eg "Mon".  Returns null if no match was found.
 	*/
-	static public function weekDayShortNameFromNumber(weekDayNum:Int, ?firstDayOfWk = 0, ?culture : Culture) {
+	static public function weekDayShortNameFromNum(weekDayNum:Int, ?firstDayOfWk = 0, ?culture : Culture) {
 		if (null == culture)
 			culture = Culture.defaultCulture;
 		
@@ -347,7 +347,7 @@ customs for missing features
 	*	@param culture The culture to use to get the weekday name.  Default: null (will fetch Culture.defaultCulture)
 	*	@return The number day in the week this is.  Will return -1 if no match was found.
 	*/
-	static public function weekDayNumberFromName(weekDayName:String, ?firstDayOfWk = 0, ?culture : Culture) {
+	static public function weekDayNumFromName(weekDayName:String, ?firstDayOfWk = 0, ?culture : Culture) {
 		if (null == culture)
 			culture = Culture.defaultCulture;
 
