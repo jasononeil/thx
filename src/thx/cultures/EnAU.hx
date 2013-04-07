@@ -48,7 +48,7 @@ class EnAU extends Culture {
 		nativeRegion = "Australia";
 		iso2 = "AU";
 		iso3 = "AUS";
-		isMetric = false;
+		isMetric = true;
 		Culture.add(this);
 	}
 	@:isVar public static var culture(get, null) : Culture; static function get_culture() { if(null == culture) culture = new EnAU(); return culture; }

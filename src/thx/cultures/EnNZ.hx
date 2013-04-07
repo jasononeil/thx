@@ -48,7 +48,7 @@ class EnNZ extends Culture {
 		nativeRegion = "New Zealand";
 		iso2 = "NZ";
 		iso3 = "NZL";
-		isMetric = false;
+		isMetric = true;
 		Culture.add(this);
 	}
 	@:isVar public static var culture(get, null) : Culture; static function get_culture() { if(null == culture) culture = new EnNZ(); return culture; }
