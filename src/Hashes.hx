@@ -77,7 +77,7 @@ class Hashes
 		for (k in new_hash.keys()){
 			var new_val = new_hash.get(k);
 			if (hash.exists(k)){
-				var old_val = Map .get(k);
+				var old_val = new_hash.get(k);
 				hash.set(k, f(k, old_val, new_val));
 			} else{
 				hash.set(k,new_val);
