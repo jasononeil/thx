@@ -4,3 +4,6 @@ doc
 bin/core.js
 bin/test.9.swf
 bin/test.10.swf
+
+# Editor files
+*.sublime-*
