@@ -352,14 +352,14 @@ customs for missing features
 			culture = Culture.defaultCulture;
 
 		// Make them lower case, so our comparison is case insensitive
-		dayNames = culture.date.days.map(function (d) return d.toLowerCase());
-		abbrDayNames = culture.date.abbrDays.map(function (d) return d.toLowerCase());
+		var dayNames = culture.date.days.map(function (d) return d.toLowerCase());
+		var abbrDayNames = culture.date.abbrDays.map(function (d) return d.toLowerCase());
 
 		// Try the full name first, then the abbr name
-		var index = dayNames.indexOf(weekDayName);
-		if (index == -1) index = abbrDayNames.indexOf(weekDayName);
+		var index = Lambda.indexOf(dayNames, weekDayName);
+		if (index == -1) index = Lambda.indexOf(abbrDayNames, weekDayName);
 
-		// If therre was a match, adjust for firstDayOfWk
+		// If there was a match, adjust for firstDayOfWk
 		if (index != -1)
 		{
 			firstDayOfWk = Ints.wrap(firstDayOfWk, 0, 6);
