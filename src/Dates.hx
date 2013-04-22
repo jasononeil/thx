@@ -231,19 +231,9 @@ class Dates
 	public static function snapToWeekDay(time : Float, day : String, ?mode=0, ?firstDayOfWk = 0)
 	{
 		var d = Date.fromTime(time).getDay();
-		var s:Int = switch(day.toLowerCase())
-		{
-			case "sunday": 0;
-			case "monday": 1;
-			case "tuesday": 2;
-			case "wednesday": 3;
-			case "thursday": 4;
-			case "friday": 5;
-			case "saturday": 6;
-			default:
-				throw new Error("unknown week day '{0}'", day);
-				-1;
-		}
+		
+		var s = FormatDate.weekDayNumFromName(day);
+		if (s == -1) throw new Error("unknown week day '{0}'", day);
 
 		if (mode < 0) 
 		{
