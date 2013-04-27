@@ -351,6 +351,8 @@ customs for missing features
 		if (null == culture)
 			culture = Culture.defaultCulture;
 
+		weekDayName = (weekDayName != null) ? weekDayName.toLowerCase() : "";
+
 		// Make them lower case, so our comparison is case insensitive
 		var dayNames = culture.date.days.map(function (d) return d.toLowerCase());
 		var abbrDayNames = culture.date.abbrDays.map(function (d) return d.toLowerCase());
