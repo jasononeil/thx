@@ -8,6 +8,10 @@ import thx.culture.FormatDate;
 import thx.culture.FormatParams;
 import thx.error.Error;
 
+// Also allow static methods in these classes to be accessed with "using Dates;"
+typedef FormatDate = thx.culture.FormatDate;
+typedef HaxeDateTools = DateTools;
+
 class Dates
 {
 	/**
@@ -429,7 +433,3 @@ class Dates
 		return Floats.compare(a.getTime(), b.getTime());
 	}
 }
-
-// Also allow static methods in these classes to be accessed with "using Dates;"
-typedef FormatDate = thx.culture.FormatDate;
-typedef HaxeDateTools = DateTools;
