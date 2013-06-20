@@ -1,6 +1,7 @@
 {
   "name": "thx",
   "license": "BSD",
+  "classPath": "src",
   "tags": ["cross","std"],
   "description": "General purpose library",
   "contributors": ["fponticelli"],
