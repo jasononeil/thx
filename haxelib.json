@@ -1,0 +1,13 @@
+{
+  "name": "thx",
+  "license": "BSD",
+  "tags": ["cross","std"],
+  "description": "General purpose library",
+  "contributors": ["fponticelli"],
+  "releasenote": "3.0 compatibility",
+  "version": "0.6.1",
+  "url": "http://github.com/fponticelli/thx/",
+  "dependencies": {
+
+  }
+}
